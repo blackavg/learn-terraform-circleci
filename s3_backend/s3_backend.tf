@@ -6,6 +6,13 @@ terraform {
   }
 }
 
+provider "aws" {
+  profile = "default"
+  region = "ap-southeast-2"
+  access_key = "AKIAJMLJLGOYXXQL5UEA"
+  secret_key = "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"
+}
+
 resource "random_uuid" "randomid" {}
 
 resource "aws_s3_bucket" "terraform_state" {
